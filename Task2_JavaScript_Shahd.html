@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 2 - JavaScript والتفاعل</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;line-height:1.9;background:#f4f7fb;color:#1f2937}
+header{background:linear-gradient(135deg,#172554,#2563eb);color:#fff;text-align:center;padding:38px 18px}
+header h1{margin:0 0 8px;font-size:2rem}
+nav{background:#1e40af;text-align:center;padding:12px;position:sticky;top:0}
+nav a{color:white;text-decoration:none;margin:0 10px;display:inline-block}
+main{max-width:1000px;margin:24px auto;padding:0 16px}
+section{background:white;margin:18px 0;padding:22px;border-radius:12px;box-shadow:0 3px 12px #0000000b}
+h2{color:#1d4ed8;margin-top:0;border-right:4px solid #60a5fa;padding-right:10px}
+.hero-img{display:block;width:min(100%,420px);margin:18px auto;border-radius:12px}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{border:1px solid #cbd5e1;padding:10px;text-align:center}
+th{background:#dbeafe}
+button{border:0;background:#2563eb;color:white;padding:10px 16px;border-radius:7px;cursor:pointer;font-size:1rem}
+button:hover{background:#1d4ed8}
+.demo{background:#eff6ff;padding:16px;border-radius:9px}
+footer{text-align:center;background:#172554;color:white;padding:18px;margin-top:30px}
+@media(max-width:600px){nav a{margin:4px;font-size:.9rem}header h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<header>
+<h1>JavaScript والتفاعل</h1>
+<p>تحويل البحث إلى صفحة ويب باستخدام HTML</p>
+<p>مقرر: تطبيقات الإنترنت والمنصات الإلكترونية</p>
+</header>
+<nav>
+<a href="#intro">المقدمة</a><a href="#about">التعريف</a><a href="#uses">الاستخدامات</a><a href="#compare">المقارنة</a><a href="#examples">أمثلة</a><a href="#refs">المراجع</a>
+</nav>
+<main>
+<section id="intro">
+<h2>المقدمة</h2>
+<p>أصبحت مواقع الويب من الوسائل الأساسية التي نستخدمها في التعليم والتواصل والعمل والحصول على المعلومات. ولم يعد الموقع مجرد صفحة تعرض نصوصًا وصورًا، بل أصبح من المهم أن يتيح للمستخدم التفاعل مع محتواه. وتساعد لغة JavaScript في تحقيق ذلك من خلال إضافة وظائف وأحداث تجعل الصفحة أكثر سهولة وفاعلية.</p>
+</section>
+<section id="about">
+<h2>ما هي JavaScript؟</h2>
+<p>JavaScript هي لغة برمجة تُستخدم على نطاق واسع في تطوير صفحات الويب. ويمكنها التعامل مع عناصر الصفحة وتغيير محتواها أو شكلها استجابةً لتصرفات المستخدم، مثل الضغط على زر أو كتابة بيانات في نموذج. وغالبًا ما تعمل مع HTML الذي يحدد عناصر الصفحة، وCSS الذي يهتم بتنسيقها.</p>
+<img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="شعار JavaScript">
+</section>
+<section id="uses">
+<h2>أهمية واستخدامات JavaScript</h2>
+<ul>
+<li>إضافة أزرار تستجيب للنقر.</li>
+<li>إظهار رسائل تنبيه أو ترحيب للمستخدم.</li>
+<li>التحقق من البيانات المدخلة في النماذج.</li>
+<li>تغيير النصوص والألوان داخل الصفحة.</li>
+<li>إنشاء قوائم تفاعلية وألعاب وتطبيقات ويب بسيطة.</li>
+<li>تحديث أجزاء من الصفحة دون الحاجة إلى إعادة تحميلها بالكامل.</li>
+</ul>
+</section>
+<section id="compare">
+<h2>الفرق بين HTML وCSS وJavaScript</h2>
+<table>
+<thead><tr><th>اللغة</th><th>وظيفتها</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>HTML</td><td>بناء هيكل الصفحة وتحديد عناصرها</td><td>عنوان أو فقرة</td></tr>
+<tr><td>CSS</td><td>تنسيق الصفحة والألوان والخطوط</td><td>تغيير لون العنوان</td></tr>
+<tr><td>JavaScript</td><td>إضافة التفاعل والوظائف</td><td>زر يعرض رسالة</td></tr>
+</tbody>
+</table>
+</section>
+<section id="examples">
+<h2>أمثلة عملية</h2>
+<div class="demo">
+<p>اضغطي على الزر لعرض رسالة باستخدام JavaScript:</p>
+<button onclick="showWelcome()">اضغط هنا</button>
+<p id="welcome" aria-live="polite"></p>
+<hr>
+<p id="sampleText">JavaScript تجعل صفحة الويب أكثر تفاعلًا.</p>
+<button onclick="changeTextColor()">تغيير لون النص</button>
+</div>
+</section>
+<section>
+<h2>الخاتمة</h2>
+<p>يتضح من البحث أن JavaScript من اللغات المهمة في تطوير مواقع الويب، لأنها تضيف التفاعل وتساعد على تحسين تجربة المستخدم. وعند استخدامها مع HTML وCSS يمكن إنشاء صفحات منظمة وجذابة وتستجيب لاحتياجات المستخدم. لذلك فإن تعلم أساسياتها يعد خطوة مفيدة لكل من يرغب في فهم تصميم وتطوير صفحات الويب.</p>
+</section>
+<section id="refs">
+<h2>المراجع</h2>
+<ol>
+<li>MDN Web Docs, “JavaScript”. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></li>
+<li>W3Schools, “JavaScript Tutorial”. <a href="https://www.w3schools.com/js/" target="_blank" rel="noopener">https://www.w3schools.com/js/</a></li>
+<li>JavaScript.info, “The Modern JavaScript Tutorial”. <a href="https://javascript.info/" target="_blank" rel="noopener">https://javascript.info/</a></li>
+</ol>
+</section>
+</main>
+<footer>
+<p>إعداد الطالبة: شهد فايز محمد أبو الخير</p>
+<p>Task 2 — HTML Web Page</p>
+</footer>
+<script>
+function showWelcome(){
+ document.getElementById("welcome").textContent="أهلًا بكِ في صفحة JavaScript والتفاعل!";
+}
+function changeTextColor(){
+ document.getElementById("sampleText").style.color="#2563eb";
+}
+</script>
+</body>
+</html>
